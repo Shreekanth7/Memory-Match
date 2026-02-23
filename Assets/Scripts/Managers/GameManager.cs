@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private SaveSystem saveSystem;
+    [SerializeField] private UIManager uiManager;
 
     private List<CardController> flippedCards = new List<CardController>();
 
@@ -32,8 +33,22 @@ public class GameManager : MonoBehaviour
 
         boardManager.GenerateBoard(rows, cols, OnCardFlipped);
 
-        // 👀 Show all cards briefly
-        StartCoroutine(ShowAllCardsAtStart(.375f)); // 1.5 second preview
+        StartCoroutine(ShowAllCardsAtStart(.375f)); // .375 second preview
+    }
+    
+    public void LoadGame()
+    {
+        SaveData data = saveSystem.Load();
+        uiManager.LoadGame();
+        if (data != null)
+        {
+            LastRows = data.rows;
+            LastCols = data.cols;
+            scoreManager.SetScore(data.score);
+
+            boardManager.GenerateBoard(data.rows, data.cols, OnCardFlipped);
+            StartCoroutine(ShowAllCardsAtStart(.375f));
+        }
     }
     
     private IEnumerator ShowAllCardsAtStart(float delay)
@@ -92,6 +107,7 @@ public class GameManager : MonoBehaviour
         if (boardManager.AllCardsMatched())
         {
             audioManager.PlayGameOver();
+            uiManager.ShowGameOverPanel();
             saveSystem.Save(new SaveData
             {
                 score = scoreManager.Score,
