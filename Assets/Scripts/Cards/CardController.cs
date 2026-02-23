@@ -28,6 +28,7 @@ public class CardController : MonoBehaviour
     public void SetMatched()
     {
         isMatched = true;
+        Debug.Log("Matched trigger fired on " + gameObject.name);
         animator.SetTrigger("Matched");
     }
 
@@ -36,6 +37,7 @@ public class CardController : MonoBehaviour
         isFlipped = false;
         cardImage.sprite = cardData.cardBackSprite;
         animator.SetTrigger("Reset");
+        Debug.Log("Reset trigger fired on " + gameObject.name);
     }
     
     public void ForceFlipFront()
@@ -49,10 +51,15 @@ public class CardController : MonoBehaviour
         if (InputLocked || isMatched || isFlipped) return;
 
         isFlipped = true;
-        cardImage.sprite = cardData.cardFrontSprite;
         Debug.Log("Flip trigger fired on " + gameObject.name);
+        Invoke(nameof(OnFlip), 0.25f);
         animator.SetTrigger("Flip");
-
         OnCardFlipped?.Invoke(this);
     }
+
+    public void OnFlip()
+    {
+        cardImage.sprite = cardData.cardFrontSprite;
+    }
+
 }

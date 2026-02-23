@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     [Header("UI Elements")]
     [SerializeField] private TMP_Text scoreText; // or TMP_Text if using TextMeshPro
     [SerializeField] private ToggleGroup gridToggleGroup;
+    [SerializeField] private GameObject gameOverPanel;
 
     [Header("Managers")]
     [SerializeField] private GameManager gameManager;
@@ -49,6 +50,14 @@ public class UIManager : MonoBehaviour
         gameManager.StartNewGame(rows, cols);
         UpdateScoreUI();
     }
+    
+    public void LoadGame()
+    {
+        menuPanel.SetActive(false);
+        gamePanel.SetActive(true);
+
+        UpdateScoreUI();
+    }
 
     public void OnClickPlayButton()
     {
@@ -70,11 +79,13 @@ public class UIManager : MonoBehaviour
         int cols = gameManager.LastCols;
 
         gameManager.StartNewGame(rows, cols);
+        gameOverPanel.SetActive(false);
         UpdateScoreUI();
     }
     
     public void BackToMenu()
     {
+        RestartGame();
         gamePanel.SetActive(false);
         menuPanel.SetActive(true);
     }
@@ -88,5 +99,10 @@ public class UIManager : MonoBehaviour
         {
             scoreText.text = $"Score: {score}";
         }
+    }
+
+    public void ShowGameOverPanel()
+    {
+        gameOverPanel.SetActive(true);
     }
 }
