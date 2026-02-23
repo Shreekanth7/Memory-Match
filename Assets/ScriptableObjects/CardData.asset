@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d48c3b9aa9b384da08349bfeb2271d, type: 3}
+  m_Name: CardData
+  m_EditorClassIdentifier: 
+  cards:
+  - cardId: 1
+    cardFrontSprite: {fileID: 21300000, guid: ab5cb26bc77776642986d95e964f35d9, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Burger
+  - cardId: 2
+    cardFrontSprite: {fileID: 21300000, guid: 30c39def6b8c47a43889e1def88948c5, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Cup Cake
+  - cardId: 3
+    cardFrontSprite: {fileID: 21300000, guid: 5a712424a57c4c743969d138e05c9d66, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Fries
+  - cardId: 4
+    cardFrontSprite: {fileID: 21300000, guid: 4a182ae6f5676824ba0cd885c53252e2, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Hot Dog
+  - cardId: 5
+    cardFrontSprite: {fileID: 21300000, guid: 0455cc8a3dd1a52429a0ff3993db8983, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Ice Cream
+  - cardId: 6
+    cardFrontSprite: {fileID: 21300000, guid: 5dd1fd130208a4e44b8731883f3faf83, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Milk Shake
+  - cardId: 7
+    cardFrontSprite: {fileID: 21300000, guid: 8f2f8cc323f956841a7342f0b8a9858c, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Pizza
+  - cardId: 8
+    cardFrontSprite: {fileID: 21300000, guid: d9e4424761b84304cb1c6d31c94a925f, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Taco
+  - cardId: 9
+    cardFrontSprite: {fileID: 21300000, guid: 693d2df3171d1614f8ca728bfa29db9a, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Apple
+  - cardId: 10
+    cardFrontSprite: {fileID: 21300000, guid: 8b6e8e34aa50e804b883d850e4972102, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Banana
+  - cardId: 11
+    cardFrontSprite: {fileID: 21300000, guid: 952c75cafbb24b947823262d71e732f5, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Carrot
+  - cardId: 12
+    cardFrontSprite: {fileID: 21300000, guid: d0351ccbd6e40584ba5edf7bf158cb7d, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Cherry
+  - cardId: 13
+    cardFrontSprite: {fileID: 21300000, guid: b32f46deae195184c9e55d799c77d956, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Lemon
+  - cardId: 14
+    cardFrontSprite: {fileID: 21300000, guid: f9fdeff92cd881541a6a372f65a5bd91, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Pear
+  - cardId: 15
+    cardFrontSprite: {fileID: 21300000, guid: ac0d604e731be88459da93b1538bcbcb, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Strawberry
+  - cardId: 16
+    cardFrontSprite: {fileID: 21300000, guid: 8fe3a6f778586cf4c8cb32dcb79a27de, type: 2}
+    cardBackSprite: {fileID: 0}
+    cardName: Watermelon
