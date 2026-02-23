@@ -10,12 +10,24 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip matchClip;
     [SerializeField] private AudioClip mismatchClip;
     [SerializeField] private AudioClip gameOverClip;
+    [SerializeField] private AudioClip bgmClip;
 
     private void Awake()
     {
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        PlayBGM();
+    }
+    
+    public void PlayBGM()
+    {
+        if (bgmClip != null)
+        {
+            audioSource.clip = bgmClip;
+            audioSource.loop = true;
+            audioSource.Play();
         }
     }
 
