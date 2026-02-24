@@ -8,7 +8,7 @@ This project was developed as a prototype to demonstrate gameplay mechanics, cle
 ## 📌 Features
 - Smooth **card flipping animations** with continuous flipping support.
 - Multiple **board layouts** (2x2, 2x3, 5x4, etc.) with automatic scaling.
-- **Scoring system** with optional combo support.
+- **Scoring system**
 - **Save/Load system** to persist progress between sessions.
 - **Sound effects** for flip, match, mismatch, and game over.
 - Runs on **Desktop** and **Mobile (Android/iOS)**.
