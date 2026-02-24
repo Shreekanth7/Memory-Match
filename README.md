@@ -7,19 +7,18 @@ This project was developed as a prototype to demonstrate gameplay mechanics, cle
 
 ## 📌 Features
 - Smooth **card flipping animations** with continuous flipping support.
-- Multiple **board layouts** (2x2, 2x3, 5x6, etc.) with automatic scaling.
+- Multiple **board layouts** (2x2, 2x3, 5x4, etc.) with automatic scaling.
 - **Scoring system** with optional combo support.
 - **Save/Load system** to persist progress between sessions.
 - **Sound effects** for flip, match, mismatch, and game over.
 - Runs on **Desktop** and **Mobile (Android/iOS)**.
 - Clean, modular code with **design patterns** (Observer, Factory, State).
-- Easily **unit tested** using Unity Test Framework (NUnit).
 
 ---
 
 ## 🛠️ Project Structure
 
-Assets/ ├── Scripts/ │   ├── Managers/ # GameManager, BoardManager, ScoreManager, AudioManager, SaveSystem │    ├── Cards/ # CardController │    ├── UI/ # UIManager │ └── Utilities/ # Helpers & extensions ├── Prefabs/ # Card prefab ├── Audio/ # Sound effects ├── Scenes/ # MainScene.unity
+Assets/ ├── Scripts/ │   ├── Managers/ # GameManager, BoardManager, ScoreManager, AudioManager, SaveSystem │    ├── Cards/ # CardController │    ├── UI/ # UIManager │ ├── Prefabs/ # Card prefab ├── Audio/ # Sound effects ├── Scenes/ # MainScene.unity
 
 
 ---
