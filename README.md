@@ -32,6 +32,8 @@ Assets/ ├── Scripts/ │   ├── Managers/ # GameManager, BoardManager
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-obscure-repo-name>.git
+   git clone
+   https://github.com/Shreekanth7/Memory-Match.git
+   
 2.Open the project in Unity.
 3.Run the MainScene to start the game.
